@@ -9,7 +9,7 @@ const Navigation = () => {
                 <Link href="/">Home</Link>
             </li>
             <li>
-                <Link href="/01-workflow-basics/step1">Workflow Builder</Link>
+                <Link href="/workflow-basics/step1">Workflow Builder</Link>
             </li>
 
         </ul>

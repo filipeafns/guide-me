@@ -10,7 +10,7 @@ export default function Home() {
       <ul className="guide-grid">
         <li>
           <Card
-            Link="/01-workflow-basics/step1"
+            Link="/workflow-basics/step1"
             Title="Workflow Builder"
             Description="Learn the basics on how to navigate the Workflow Builder"
             Image="/workflow-basics/wf-basics-1.png" />
