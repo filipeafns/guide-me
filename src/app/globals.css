@@ -1,0 +1,338 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* CSS Reset - Normalize browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html, body {
+  width: 100%;
+  height: 100%;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font-family: "Inter", sans-serif;
+  background-image: url("/bg.svg");
+  background-repeat: repeat;
+  background-color: #000;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block; /* Prevent inline spacing */
+}
+
+ul, ol {
+  list-style: none;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, button, textarea, select {
+  font: inherit; /* Inherit font-family and size from parent */
+}
+
+main { 
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  height: 100%;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 4px 18px 4px 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border-radius: 50px;
+  width: fit-content;
+}
+
+header div {
+  padding: 8px 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header div:first-of-type {
+  border-radius: 16px 0 0 16px;
+}
+
+header div:last-of-type {
+  border: 0;
+}
+
+header a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.shot-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.navigation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(40px);
+  opacity: 0;
+  color: #fff;
+  padding: 16px;
+  z-index: 1;
+  transform: translateX(-210px);
+  transition: .2s all ease;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navigation li {
+  padding: 16px 8px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+.navigation li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navigation:hover {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+
+.hotspot {
+  position: relative;
+  min-width: 1280px;
+  display: block;
+  overflow: hidden;
+}
+
+.hotspot img {
+  min-width: 1280px;
+  max-width: 1280px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: #141313;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 16px;
+  width: 250px;
+  height: fit-content;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  gap: 16px;
+  color: #eaeaea;
+  animation: moveIn .4s cubic-bezier(0, 0.66, 0, 0.88) forwards;
+}
+
+.tooltip p {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  border-width: 8px;
+  border-style: solid;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 2px solid #000000;
+  animation: pulse 2s cubic-bezier(0, 0.62, 0, 0.74) infinite;
+}
+
+.tooltip-bottom::after {
+  bottom: -16px;
+  left: 40px;
+  transform: translateX(-50%);
+  border-color: #141313 transparent transparent transparent;
+}
+
+.tooltip-bottom::before {
+  bottom: -40px;
+  left: 40px;
+  transform: translateX(-50%) scale(0);
+}
+
+.tooltip-left::after {
+  left: -16px;
+  top: 40px;
+  transform: translateY(-50%);
+  border-color: transparent #141313 transparent transparent;
+}
+
+.tooltip-left::before {
+  left: -40px;
+  top: 30px;
+  transform: translateY(-50%) scale(0);
+}
+
+.tooltip-top::after {
+  top: -16px;
+  left: 40px;
+  transform: translateX(-50%);
+  border-color: transparent transparent #141313 transparent;
+}
+.tooltip-top::before {
+  top: -40px;
+  left: 40px;
+  transform: translateX(-50%) scale(0);
+}
+
+.tooltip-right::after {
+  right: -16px;
+  top: 40px;
+  transform: translateY(-50%);
+  border-color: transparent transparent transparent #141313;
+}
+.tooltip-right::before {
+  right: -50px;
+  top: 30px;
+  transform: translateY(-50%) scale(0);
+}
+
+.button-group {
+  display: flex;
+  gap: 4px;
+}
+
+.button-link { 
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all .2s ease; 
+}
+
+.button-link:hover { 
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.overlay {
+  position: absolute;
+  top: -100vw;
+  left: -100vw;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 400vw;
+  height: 400vh;
+  content: "";
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.2s ease; 
+}
+
+.tooltip-ctrl {
+  transition: 1.2s all ease;
+}
+
+.tooltip-ctrl:hover .overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.overlay:hover {
+  display: none;
+}
+
+.home {
+  color: #fff;
+  padding: 5rem;
+}
+
+.card a {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(9, 9, 9);
+  padding: 14px;;
+  gap: 16px;
+  width: 300px;
+  height: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all .2s ease-out;
+  border-radius: 8px;
+}
+
+.card p {
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.4rem;
+}
+.card img {
+  border-radius: 2px;
+  max-height: 180px;
+}
+
+.card a:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: translateY(2px);
+}
+
+.guide-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+
+@keyframes moveIn {
+  0% {
+    transform: translateX(-30px); /* Start 100px to the left */
+  }
+  100% {
+    transform: translateX(0); /* Slide to the original position */
+  }
+
+}
+@keyframes pulse {
+  0% {
+    transform: translateX(-50%) scale(0);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+.hidethis { display: none; }
