@@ -12,23 +12,25 @@ const generateCardData = () => {
         const tutorialPath = path.join(guidesDir, dir);
         if (fs.statSync(tutorialPath).isDirectory()) {
             cardData.push({
-                Link: `/${dir}/step1`,
+                Link: `/guides/${dir}/step1`,
                 Title: dir.replace(/-/g, ' '),
                 Description: "Description for " + dir,
-                Image: `/${dir}/1.png`
+                Image: `/guides/${dir}/1.png`
             });
         }
     });
 
     fs.writeFileSync(cardDataFile, JSON.stringify(cardData, null, 2));
-    console.log('cardData.json has been updated.');
+    console.log('cardData.json has been updated with the latest entries.');
 };
 
 // Initial generation
 generateCardData();
 
 // Watch for changes in the guides directory
-chokidar.watch(guidesDir).on('addDir', (path) => {
-    console.log(`New folder added: ${path}`);
-    generateCardData();
+chokidar.watch(guidesDir).on('all', (event, path) => {
+    if (event === 'addDir' || event === 'unlinkDir') {
+        console.log(`Directory changed: ${path}`);
+        generateCardData(); // Update cardData.json on add/remove
+    }
 });
