@@ -1,6 +1,6 @@
-import styles from "./page.module.css";
 import Navigation from "./Components/Tooltip/navigation";
 import Card from "./Components/card";
+import cardData from "./cardData.json";
 
 export default function Home() {
   return (
@@ -8,13 +8,16 @@ export default function Home() {
       <Navigation />
       <h1>Explore Guides</h1>
       <ul className="guide-grid">
-        <li>
-          <Card
-            Link="/workflow-basics/step1"
-            Title="Workflow Builder"
-            Description="Learn the basics on how to navigate the Workflow Builder"
-            Image="/workflow-basics/wf-basics-1.png" />
-        </li>
+        {cardData.map((card, index) => (
+          <li key={index}>
+            <Card
+              Link={card.Link}
+              Title={card.Title}
+              Description={card.Description}
+              Image={card.Image}
+            />
+          </li>
+        ))}
       </ul>
     </main>
   );
