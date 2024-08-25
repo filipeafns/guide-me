@@ -12,6 +12,12 @@
     "Image": "/guides/tutorial-1 copy/1.png"
   },
   {
+    "Link": "/guides/tutorial-1 copy 2/step1",
+    "Title": "tutorial 1 copy 2",
+    "Description": "Description for tutorial-1 copy 2",
+    "Image": "/guides/tutorial-1 copy 2/1.png"
+  },
+  {
     "Link": "/guides/tutorial-test/step1",
     "Title": "tutorial test",
     "Description": "Description for tutorial-test",
