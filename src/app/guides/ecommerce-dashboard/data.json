@@ -1,8 +1,9 @@
 {
-  "projectTitle": "tutorial-1",
+  "projectTitle": "ecommerce-dashboard",
   "steps": [
     {
       "step": 1,
+      "image": "1",
       "tooltipContent": {
         "title": "Event",
         "text": "The right block in the workflow is always known as the event block. This block triggers off the workflow based on specific criteria. In this example, the event block is a Custom Event.",
@@ -13,6 +14,7 @@
     },
     {
       "step": 2,
+      "image": "1",
       "tooltipContent": {
         "title": "Destination",
         "text": "While you can only have one event block per workflow, you can have as many destination blocks as you'd like. Destination blocks specify where the data from the proceeding block(s) should be sent.",
@@ -23,6 +25,7 @@
     },
     {
       "step": 3,
+      "image": "1",
       "tooltipContent": {
         "title": "Workflow Logs",
         "text": "The workflow logs button opens a panel that reveals all workflow logs (both success and failed). This is a useful tool for debugging errors.",

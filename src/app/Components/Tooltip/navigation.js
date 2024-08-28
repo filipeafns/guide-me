@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import cardData from '../../cardData.json';
 
 // Define the functional or class-based component
 const Navigation = () => {
@@ -8,10 +9,11 @@ const Navigation = () => {
             <li>
                 <Link href="/">Home</Link>
             </li>
-            <li>
-                <Link href="/workflow-basics/step1">Workflow Builder</Link>
-            </li>
-
+            {cardData.map((card, index) => (
+                <li key={index}>
+                    <Link href={card.Link}>{card.Title}</Link>
+                </li>
+            ))}
         </ul>
     );
 };

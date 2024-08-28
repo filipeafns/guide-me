@@ -1,26 +1,14 @@
 [
   {
-    "Link": "/guides/tutorial-1/step1",
-    "Title": "tutorial 1",
-    "Description": "Description for tutorial-1",
-    "Image": "/guides/tutorial-1/1.png"
+    "Link": "/guides/ecommerce-dashboard/step1",
+    "Title": "ecommerce dashboard",
+    "Description": "Description for ecommerce-dashboard",
+    "Image": "/guides/ecommerce-dashboard/1.png"
   },
   {
     "Link": "/guides/tutorial-1 copy/step1",
     "Title": "tutorial 1 copy",
     "Description": "Description for tutorial-1 copy",
     "Image": "/guides/tutorial-1 copy/1.png"
-  },
-  {
-    "Link": "/guides/tutorial-1 copy 2/step1",
-    "Title": "tutorial 1 copy 2",
-    "Description": "Description for tutorial-1 copy 2",
-    "Image": "/guides/tutorial-1 copy 2/1.png"
-  },
-  {
-    "Link": "/guides/tutorial-test/step1",
-    "Title": "tutorial test",
-    "Description": "Description for tutorial-test",
-    "Image": "/guides/tutorial-test/1.png"
   }
 ]

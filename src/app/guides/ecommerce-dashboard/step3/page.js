@@ -6,10 +6,11 @@ import workflowSteps from "../data.json";
 const { projectTitle: PROJECT_TITLE, steps } = workflowSteps;
 const CURRENT_STEP = 3;
 
-const getWorkflowImage = (step) => `/guides/${PROJECT_TITLE}/${step}.png`;
+const getWorkflowImage = (image) => `/guides/${PROJECT_TITLE}/${image}.png`;
 
 export default function Home() {
   const stepData = steps.find(step => step.step === CURRENT_STEP) || {};
+  const { image } = stepData;
 
   const tooltipContent = {
     ...(stepData.tooltipContent || {}),
@@ -22,10 +23,10 @@ export default function Home() {
       <Navigation />
       <WorkflowStep 
         tooltipContent={tooltipContent}
-        imageSrc={getWorkflowImage(CURRENT_STEP)}
+        imageSrc={getWorkflowImage(image)}
         altText={`${PROJECT_TITLE.replace('-', ' ')} step ${CURRENT_STEP}`}
-        hiddenImageSrc={getWorkflowImage(CURRENT_STEP + 1)}
-        hiddenImageAlt={`${PROJECT_TITLE.replace('-', ' ')} step ${CURRENT_STEP + 1}`}
+        hiddenImageSrc={getWorkflowImage(Number(image) + 1)}
+        hiddenImageAlt={`${PROJECT_TITLE.replace('-', ' ')} step ${Number(image) + 1}`}
       />
     </main>
   );
