@@ -1,14 +1,26 @@
 [
   {
+    "Link": "/guides/cookies/step1",
+    "Title": "cookies",
+    "Description": "Description for cookies",
+    "Image": "/guides/cookies/1.png"
+  },
+  {
     "Link": "/guides/ecommerce-dashboard/step1",
     "Title": "ecommerce dashboard",
     "Description": "Description for ecommerce-dashboard",
     "Image": "/guides/ecommerce-dashboard/1.png"
   },
   {
-    "Link": "/guides/tutorial-1 copy/step1",
-    "Title": "tutorial 1 copy",
-    "Description": "Description for tutorial-1 copy",
-    "Image": "/guides/tutorial-1 copy/1.png"
+    "Link": "/guides/mentors/step1",
+    "Title": "mentors",
+    "Description": "Description for mentors",
+    "Image": "/guides/mentors/1.png"
+  },
+  {
+    "Link": "/guides/orders/step1",
+    "Title": "orders",
+    "Description": "Description for orders",
+    "Image": "/guides/orders/1.png"
   }
 ]

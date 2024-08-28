@@ -6,9 +6,6 @@ import cardData from '../../cardData.json';
 const Navigation = () => {
     return (
         <ul className="navigation">
-            <li>
-                <Link href="/">Home</Link>
-            </li>
             {cardData.map((card, index) => (
                 <li key={index}>
                     <Link href={card.Link}>{card.Title}</Link>

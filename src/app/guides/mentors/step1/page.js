@@ -4,7 +4,7 @@ import WorkflowStep from "@/app/Components/WorkflowStep";
 import workflowSteps from "../data.json";
 
 const { projectTitle: PROJECT_TITLE, steps } = workflowSteps;
-const CURRENT_STEP = 3;
+const CURRENT_STEP = 1;
 
 const getWorkflowImage = (image) => `/guides/${PROJECT_TITLE}/${image}.png`;
 

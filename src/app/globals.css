@@ -26,6 +26,12 @@ html, body {
   background-color: #000;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -59,11 +65,15 @@ main {
 }
 
 header {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 100;
   display: flex;
   align-items: center;
   padding: 4px 18px 4px 4px;
   border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0);
   color: #fff;
   border-radius: 50px;
   width: fit-content;
@@ -110,7 +120,8 @@ header a:hover {
   color: #fff;
   padding: 16px;
   z-index: 1;
-  transform: translateX(-210px);
+  padding-top: 72px;
+  transform: translateX(-190px);
   transition: .2s all ease;
   border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
