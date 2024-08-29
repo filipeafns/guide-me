@@ -59,9 +59,41 @@ input, button, textarea, select {
 main { 
   padding: 16px;
   display: flex;
+  align-items: center;
   gap: 16px;
   height: 100%;
   flex-direction: column;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hero > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgb(0, 0, 0);
+  border-radius: 50px;
+  margin-bottom: 56px;
+}
+
+.hero p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.hero p:first-child {
+  color: white;
+}
+
+.hero p:last-child {
+  color: rgba(255, 255, 255, 0.6);
 }
 
 header {
@@ -95,6 +127,11 @@ header div:last-of-type {
 header a:hover {
   background-color: rgba(255, 255, 255, 0.1);
   cursor: pointer;
+}
+
+h3 {
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 .shot-container {
@@ -291,7 +328,7 @@ header a:hover {
 
 .home {
   color: #fff;
-  padding: 5rem;
+  padding: 3rem;
 }
 
 .card a {
@@ -313,7 +350,9 @@ header a:hover {
 }
 .card img {
   border-radius: 2px;
-  max-height: 180px;
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
 }
 
 .card a:hover {
@@ -325,6 +364,7 @@ header a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  justify-content: center;
 }
 
 
