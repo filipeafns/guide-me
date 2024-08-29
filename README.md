@@ -20,6 +20,7 @@ To add new guides, follow these steps:
 
 Duplicate an existing folder inside app/guides, rename it to your new guide name.then replicate the new folder inside public/guides.
 
+''''
 
 ├── app/
 │   ..
@@ -37,6 +38,7 @@ Duplicate an existing folder inside app/guides, rename it to your new guide name
 ├── package.json
 └── README.md
 
+''''
 
 **Step 2: Add Images to the Folder**
 
