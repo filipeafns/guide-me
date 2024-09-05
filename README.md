@@ -1,7 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Guide Me
 
-
-
+GuideMe is a simple guide creator for web apps. It allows you to create step-by-step guides for your web apps.
 
 
 ![Project Structure - Index](/public/index.png)
@@ -13,6 +12,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
 ## Getting Started
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
