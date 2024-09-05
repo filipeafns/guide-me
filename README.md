@@ -4,10 +4,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 
 
-![Project Structure - Index](index.png)
+![Project Structure - Index](/index.png)
 
 
-![Project Structure - Page](page.png)
+![Project Structure - Page](/page.png)
 
 
 
