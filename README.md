@@ -1,6 +1,11 @@
 ## Guide Me
 
-GuideMe is a simple guide creator for web apps. It allows you to create step-by-step guides for your web apps.
+GuideMe is a simple guide creator for web apps. It allows you to create step-by-step guides for your web apps. [Demo](guide-me-three.vercel.app)
+
+- Create new guides by just creating new folders inside `app/guides`
+- Select images to use in JSON file inside each folder
+- Position tooltips using top left absolute positioning
+- Guides will automatically appear on homepage
 
 
 ![Project Structure - Index](/public/index.png)
